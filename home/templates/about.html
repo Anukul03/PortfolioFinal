@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<section id="about">
+    <div class="about-container">
+        <div class="profile-section">
+            <div class="profile-photo-container">
+                <img src="{% static 'images/myphoto.png' %}" alt="Profile Photo" class="profile-photo">
+            </div>
+            <div class="profile-info">
+                <h1>About Me</h1>
+                <h2>Data Scientist & Machine Learning Engineer</h2>
+                <p>I specialize in transforming complex data into actionable insights that drive business value. With
+                    expertise in machine learning, statistical analysis, and data visualization, I build solutions that
+                    solve real-world problems.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <h3>My Journey</h3>
+                <p>My journey into data science began during my master's program, where I first explored the
+                    transformative potential of machine learning in uncovering hidden patterns within complex datasets.
+                    What started as academic curiosity quickly evolved into a deep professional commitment to leveraging
+                    data for strategic decision-making.</p>
+
+                <p>Over the years, I've grown both technically and strategically—refining my skills in statistical
+                    modeling, deep learning, and big data processing while gaining a deeper understanding of business
+                    dynamics across finance, healthcare, and e-commerce domains. This dual focus on technical depth and
+                    domain knowledge has allowed me to build scalable solutions that not only perform well but also
+                    deliver measurable ROI.</p>
+
+                <p>One of the most rewarding aspects of my career has been mentoring junior data scientists and leading
+                    cross-functional teams to deliver impactful projects. Collaborating with engineers, product
+                    managers, and domain experts has sharpened my communication and leadership abilities, enabling me to
+                    translate complex findings into actionable insights for stakeholders at all levels.</p>
+
+                <p>xMy goal is to drive smarter decisions through data while
+                    empowering organizations to build sustainable, data-driven cultures that grow with the times.</p>
+
+                <h3>Education</h3>
+                <div class="education-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h4>MSc in Data Science</h4>
+                        <div class="edu-institution">Tech University</div>
+                        <div class="edu-duration">2016 - 2018</div>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h4>BSc in Computer Science</h4>
+                        <div class="edu-institution">State University</div>
+                        <div class="edu-duration">2012 - 2016</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3>Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Data Science</h4>
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Statistical Analysis</li>
+                            <li>Predictive Modeling</li>
+                            <li>Data Visualization</li>
+                            <li>Natural Language Processing</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technologies</h4>
+                        <ul>
+                            <li>Python (Pandas, NumPy)</li>
+                            <li>TensorFlow & PyTorch</li>
+                            <li>SQL & NoSQL Databases</li>
+                            <li>Apache Spark</li>
+                            <li>Tableau & Power BI</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Cloud & Tools</h4>
+                        <ul>
+                            <li>AWS & Azure</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>Git & CI/CD</li>
+                            <li>Agile Methodologies</li>
+                            <li>Big Data Technologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

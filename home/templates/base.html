@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Data | Forged in Code </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.gif' %}" type="image/x-icon">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header>
+        <a href="{% url 'home' %}" class="logo">
+            <i class="fa-brands fa-web-awesome"></i>
+            <span>DataFlex</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'experience' %}">Experience</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

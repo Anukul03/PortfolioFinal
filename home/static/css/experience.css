@@ -1,0 +1,215 @@
+/* SECTION : Experience Page */
+#experience {
+    padding: 150px 50px 100px;
+    /* background: linear-gradientx (to bottom, #0a192f, #020c1b); */
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.section-subtitle {
+    background: rgba(10, 25, 47, 1); 
+    font-size: 1.2rem;
+    padding-left: 10px;
+    border-radius: 10px;
+    /* color: var(--text-secondary); */
+    margin-bottom: 60px;
+    max-width: 700px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    background: var(--accent);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-card {
+    padding: 20px;
+    position: relative;
+    background: rgba(10, 25, 47, 0.9); /* Transparent card background */
+    border-radius: 10px;
+    width: 48%;
+    z-index: 10;
+    margin-bottom: 80px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    /* backdrop-filter: blur(5px); */
+    border: 1px solid rgba(var(--accent), 0.2); 
+}
+
+.timeline-card:hover {
+    border-left: 3px solid var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(var(--accent), 0.2);
+}
+
+.timeline-card:nth-child(odd) {
+    left: 0;
+}
+.timeline-card:nth-child(even) {
+    left: 52%;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.company-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(229, 9, 20, 0.1);
+    border: 2px solid var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.role-badge {
+    background: linear-gradient(90deg, var(--accent), #75a09d);
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 8px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.timeline-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.tech-stack h4 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+/* Tech Stack Chips */
+.tech-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-chip {
+    background: rgba(0, 150, 136, 0.1); /* Neon Teal tinted background */
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    color: #009688; /* Neon Teal text */
+    border: 1px solid rgba(0, 150, 136, 0.3);
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tech-chip:hover {
+    background: #009688; /* Neon Teal on hover */
+    color: #fff; /* White text on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 150, 136, 0.3); /* Neon Teal shadow on hover */
+}
+/* Achievement Preview */
+.achievement-preview {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    background: rgba(2, 12, 27, 0.95);
+    padding: 25px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--accent);
+    z-index: 2;
+}
+
+.timeline-card:hover .achievement-preview {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.achievement-preview::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    background: rgba(10, 25, 47, 0.7);
+    transform: rotate(45deg);
+    border-top: 1px solid var(--accent);
+    border-left: 1px solid var(--accent);
+}
+
+.achievement-preview h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.achievement-preview ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.achievement-preview li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.achievement-preview li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-card {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-card:nth-child(even),
+    .timeline-card:nth-child(odd) {
+        left: 0;
+    }
+}

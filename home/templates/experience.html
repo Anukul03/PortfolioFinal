@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/experience.css' %}">
+
+<section id="experience">
+    <div class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">My journey through data science roles and accomplishments</p>
+        
+        <div class="timeline">
+            {% for experience in experiences %}
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div class="company-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div>
+                        <h3>{{ experience.role }}</h3>
+                        <div class="role-badge">{{ experience.company }} • {{ experience.duration }}</div>
+                    </div>
+                </div>
+                <p>{{ experience.description }}</p>
+                <div class="tech-stack">
+                    <h4>Tech Stack:</h4>
+                    <div class="tech-chips">
+                        {% for tool in experience.toolstack %}
+                        <div class="tech-chip">{{ tool }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="achievement-preview">
+                    <h4>Achievements:</h4>
+                    <ul>
+                        {% for achievement in experience.achievements %}
+                        <li><i class="fas fa-trophy"></i> {{ achievement }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

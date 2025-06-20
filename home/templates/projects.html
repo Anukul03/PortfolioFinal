@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-subtitle">Explore my portfolio of data-driven solutions and machine learning applications</p>
+        
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card">
+                <div class="project-thumb" style="background-image: url('{{ project.image_url }}')">
+                    <div class="project-thumb-content">
+                        <i class="{{ project.icon }}"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <div class="project-meta">
+                        <span class="project-category">{{ project.category }}</span>
+                        <span class="project-duration"><i class="fas fa-clock"></i> {{ project.duration }}</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: {{ project.completion }}%"></div>
+                    </div>
+                </div>
+                <div class="project-overlay">
+                    <h4>Tech Stack:</h4>
+                    <div class="project-tags">
+                        {% for tag in project.tags %}
+                        <div class="tag">{{ tag }}</div>
+                        {% endfor %}
+                    </div>
+                    <p>{{ project.description }}</p>
+                    <div class="toolstack">
+                        <div class="tech-stack">
+                            {% for tech in project.tech_stack %}
+                            <div class="tech-chip">{{ tech }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button class="view-button">View Project</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
