@@ -21,7 +21,6 @@
 
 .projects-grid {
     display: grid;
-    margin: 10px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 40px;
     width: 1400px;
